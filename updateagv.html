@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <title>แก้ไขข้อมูล AGV</title>
+  
+</head>
+
+<body>
+    <div class="menu-container">
+
+        
+            
+        <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <a href="index.html">
+            <img src="img/home-icon.png" alt="Home" class="icon">
+        </a>
+    </div>
+    
+    
+
+    <!-- Navigation Bar -->
+    
+</div>  
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <h4 class="text-white">
+        <img src="img/computer-screen.png" alt="Dashbord" class="icon" style="margin-right: 5%;">AGV Monitor</h4>
+    <a href="index.html" class="menu-item">
+        <img src="img/home-icon.png" alt="Home" class="icon"> Home
+    </a>
+    <a href="addagv.html" class="menu-item">
+        <img src="img/agv.png" alt="Robot" class="icon"> Add AGV
+    </a>
+    <a href="map.html" class="menu-item">
+        <img src="img/map-icon.png" alt="Map" class="icon"> Map
+    </a>
+    <a href="report.html" class="menu-item">
+        <img src="img/column.png" alt=""> Report
+    </a>
+    <a href="testUpimg.html" class="menu-item">
+        <img src="img/gears.png" alt=""> Settings
+    </a>
+    <a href="about.html" class="menu-item">
+        <img src="img/file-7V5UYQL2ZHG3up9KWUNYir-removebg-preview.png" style="height: 24px;width: 24;" alt=""> About
+    </a>
+    
+</div>
+<div class="main-content">
+    <div class="main-content">
+        <div class="container mt-5">
+            <div class="card boxgreen p-5">
+                
+                        <h2 id="agvname">ฟอร์มแก้ไขข้อมูล AGV</h2>
+                    <hr>
+                    <form id="editAgvForm">
+                        <label for="agv_name" >AGV Name:</label>
+                        <input type="hidden" id="agv_name" name="agv_name" required>
+                        <label for="line">สายการผลิต:</label>
+                        <input type="text" id="line" name="line" required>
+                    
+                        <label for="name">name:</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="plant">plant:</label>
+                        <input type="text" id="plant" name="plant" required>
+                    
+                    
+                        <button class="btn btn-outline-light btn-sm" type="submit">บันทึกการแก้ไข</button>
+                    </form>
+                    
+                </div>
+            </div>
+        
+</div>
+</div>
+<script>
+    document.getElementById("image-dropdown").addEventListener("change", (event) => {
+        const selectedPath = event.target.value; // Get the selected image path
+        if (selectedPath) {
+            localStorage.setItem("selectedBackground", selectedPath); // Save to localStorage
+            console.log(`Selected background saved: ${selectedPath}`);
+        } else {
+            console.warn("No image selected.");
+        }
+    });
+</script>
+
+<script src="updatefrom.js"></script>
+<script src="burgermenu.js"></script>
+</body>
+</html>
