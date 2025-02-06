@@ -84,6 +84,7 @@ sudo systemctl enable influxdb
 - `tbl_agvname` → รายชื่อ AGV
 - `tbl_alarm` → รหัสข้อผิดพลาดของ AGV
 - `tbl_sequence` → ลำดับการทำงานของ AGV
+- `tag_agv` → สำหรับบอกตำแหน่งในแผนที่
 - `map_images` → ภาพแผนที่
 
 ---
